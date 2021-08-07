@@ -51,11 +51,8 @@ function decode(expr) {
         res.push(code);
       }
     });
-
     if (res) {
-      res = res.join('');
-      res = res.replace(/10/g, '.');
-      res = res.replace(/11/g, '-');
+      res = res.join('').replace(/10/g, '.').replace(/11/g, '-');
       if (res === '**********') {
         res = ' ';
       }
