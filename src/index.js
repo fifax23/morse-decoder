@@ -51,7 +51,7 @@ function decode(expr) {
         res.push(code);
       }
     });
-    if (res) {
+    if (res.length > 0) {
       res = res.join('').replace(/10/g, '.').replace(/11/g, '-');
       if (res === '**********') {
         res = ' ';
