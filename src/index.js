@@ -45,7 +45,7 @@ function decode(expr) {
 
   while (arrayOfExpr.length) {
     let res = [];
-    let encodedLetter = arrayOfExpr.splice(-LETTER_LENGTH / 2);
+    let encodedLetter = arrayOfExpr.splice(0, LETTER_LENGTH / 2);
     encodedLetter.forEach((code) => {
       if (code == 10 || code == 11 || code == '**') {
         res.push(code);
@@ -67,7 +67,7 @@ function decode(expr) {
     }
   }
 
-  return finalWord.split('').reverse().join('');
+  return finalWord;
 }
 
 module.exports = {
